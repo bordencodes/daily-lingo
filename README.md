@@ -27,7 +27,7 @@
 
 #### Utilized Trello to begin the planning process and organized the key tasks to complete this project.
 
-#### View: [Trello Board](https://trello.com/b/vBysUzxG/daily-lingo-language-learning-habit-tracker)
+#### View: [Trello Board](https://trello.com/invite/b/vBysUzxG/ATTI9423beeed6e55bef02bea47279f6a25f905BB0E8/daily-lingo-language-learning-habit-tracker)
 
 #### View: [ERD](https://postimg.cc/CZy6X3NG)
 
