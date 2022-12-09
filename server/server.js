@@ -1,29 +1,16 @@
 const express = require('express')
-const mongoose = require('mongoose')
+const db = require('./db')
 
 const app = express()
 
-require('dotenv').config()
-
 const PORT = process.env.PORT || 3001
-const MONGODB_URI =
-  process.env.MONGODB_URI || 'mondgodb://localhost/dailylingoDB'
 
 app.use(express.json())
 
-app.get('/', (req, res) => {
-  res.send('Start Here')
+db.on('error', console.error.bind(console, 'MongoDB connection error:'))
+
+app.get('/*', (req, res) => {
+  res.sendFile(`${__direname}/client/build/index.html`)
 })
 
-mongoose
-  .connect(MONGODB_URI)
-  .then(() => {
-    console.log('Successfully connected to MongoDB.')
-  })
-  .catch((e) => {
-    console.error('Connection error', e.message)
-  })
-
-const db = mongoose.connection
-
-module.exports = db
+app.listen(PORT, () => console.log(`Listening on port: ${PORT}`))
