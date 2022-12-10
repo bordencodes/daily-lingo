@@ -1,5 +1,7 @@
 import './App.css'
 import Nav from './components/Nav'
+import Habits from './pages/Habits'
+import Home from './pages/Home'
 
 function App() {
   return (
@@ -8,7 +10,7 @@ function App() {
         {/* <h1>One Word a Day</h1> */}
         <Nav />
       </header>
-      <div>
+      {/* <div>
         <form>
           <div>
             <label>Word: </label>
@@ -22,7 +24,9 @@ function App() {
         <ul>
           <li> Word: </li>
         </ul>
-      </main>
+      </main> */}
+      <Route path="/" element={<Home />} />
+      <Route path="/habit" element={<Habits />} />
     </div>
   )
 }
