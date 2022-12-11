@@ -6,8 +6,9 @@ const Nav = () => {
         <div className="navbar">
           <div className="appTitle">Daily Lingo</div>
           <Link to="/" className="navLinks">Home</Link>
-          <Link to="/calendar" className="navLinks">Calendar</Link>
-          {/* <Link to="/sign" className="navLinks">Sign-In</Link> */}
+          {/* <Link to="/calendar" className="navLinks">Calendar</Link> */}
+          <Link to="/signin" className="navLinks">Sign-In</Link>
+          <Link to="/register" className="navLinks">Register</Link>
         </div>
       </nav>
   )

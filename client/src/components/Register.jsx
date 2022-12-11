@@ -52,7 +52,7 @@ const handleUserRegChange = (e) => {
         </section>
         <button type="submit">Submit</button>
       </form>
-      <div>Already have an account? <Link to="/signin">Log-in</Link></div>
+      <div>Already have an account? <Link to="/signin">Sign-in</Link></div>
     </div>
   )
 }
