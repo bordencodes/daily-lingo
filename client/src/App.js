@@ -1,7 +1,9 @@
 import './App.css'
+import { Route, Routes } from 'react-router-dom'
 import Nav from './components/Nav'
 import Habits from './pages/Habits'
 import Home from './pages/Home'
+import Register from './components/Register'
 
 function App() {
   return (
@@ -25,8 +27,13 @@ function App() {
           <li> Word: </li>
         </ul>
       </main> */}
-      <Route path="/" element={<Home />} />
-      <Route path="/habit" element={<Habits />} />
+      <div>
+        <Home />
+        <Habits />
+        <Register />
+      </div>
+      {/* <Route path="/" element={<Home />} />
+      <Route path="/habit" element={<Habits />} /> */}
     </div>
   )
 }

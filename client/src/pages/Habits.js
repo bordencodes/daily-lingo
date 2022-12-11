@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react'
-import axios from 'axios'
+// import { useState, useEffect } from 'react'
+// import axios from 'axios'
+import React from 'react'
 
 const Habits = () => {
   // const [phrases, updatePhrases] = useState([])
@@ -54,6 +55,7 @@ const Habits = () => {
 
   return (
     <div className="App">
+      The habits go here.
       {/* <h3 className="allPhrases">All Phrases</h3>
       <br />
       <div className="phraseGrid">
