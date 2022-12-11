@@ -55,11 +55,11 @@ const Habits = () => {
 
   return (
     <div className="App">
-      The habits go here.
+      <div></div>
       {/* <h3 className="allHabits">All Habits</h3>
       <br />
       <div className="habitGrid">
-        {phrases.map((habit) => (
+        {habits.map((habit) => (
           <section key={habit.id}>
             <div>{habit.habit}</div>
           </section>
@@ -73,7 +73,7 @@ const Habits = () => {
         </label>
         <input id="habit" onChange={inputChange} value={input.habit} />
         <select
-          value={changePhrase.checkHabit}
+          value={changeHabit.checkHabit}
           className="updateDropdown"
           id="checkHabit"
           onChange={handleChange}

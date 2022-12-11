@@ -12,7 +12,7 @@ const [userSignin, setUserSignin] = useState({
   confirmPassword: "",
 })
 
-const handleUserSigninChange = (e) => {
+const handleSigninChange = (e) => {
   const {id, value} = e.target
   setUserSignin((current) => ({
     ...current,
@@ -26,11 +26,11 @@ const handleUserSigninChange = (e) => {
       <form>
         <section>
         <label>Email: </label>
-        <input type="text" id="email" placeholder="Email" maxLength="75" onChange={handleUserSigninChange}></input>
+        <input type="text" id="email" placeholder="Email" maxLength="75" onChange={handleSigninChange}></input>
         </section>
         <section>
         <label>Password: </label>
-        <input type="text" id="password" placeholder="Password" onChange={handleUserSigninChange}></input>
+        <input type="text" id="password" placeholder="Password" onChange={handleSigninChange}></input>
         </section>
         <button type="submit">Submit</button>
       </form>

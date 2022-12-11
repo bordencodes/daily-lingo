@@ -5,6 +5,7 @@ import Habits from './pages/Habits'
 import Home from './pages/Home'
 import Register from './components/Register'
 import Signin from './components/Signin'
+import WordList from './components/WordList'
 
 function App() {
   return (

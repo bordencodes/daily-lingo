@@ -2,6 +2,9 @@
 // import axios from 'axios'
 // import { useNavigate } from 'react-router-dom'
 import React from 'react'
+import CreateItems from '../components/CreateItems'
+import TrackedItems from '../components/TrackedItems'
+import WordList from '../components/WordList'
 
 const Home = () => {
   // let navigate = useNavigate()
@@ -51,7 +54,34 @@ const Home = () => {
 
   return (
     <div className="App">
-      This is the home page.
+      <CreateItems />
+      <WordList>
+        <TrackedItems
+          name="Word of the day"
+          trans="Translation Here"
+          date={new Date().toLocaleDateString()}
+        />
+        <TrackedItems
+          name="Word of the day"
+          trans="Translation Here"
+          date={new Date().toLocaleDateString()}
+        />
+        <TrackedItems
+          name="Word of the day"
+          trans="Translation Here"
+          date={new Date().toLocaleDateString()}
+        />
+        <TrackedItems
+          name="Word of the day"
+          trans="Translation Here"
+          date={new Date().toLocaleDateString()}
+        />
+        <TrackedItems
+          name="Word of the day"
+          trans="Translation Here"
+          date={new Date().toLocaleDateString()}
+        />
+      </WordList>
       {/* <h2>Select a List</h2>
       {collections.map((collection) => (
         <section key={collection.id}>
