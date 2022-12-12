@@ -24,4 +24,6 @@ router.put('/habit/:id', controllers.updateHabit)
 
 router.delete('/habit/:id', controllers.deleteHabit)
 
+router.get('/calendar', controllers.getCalendar)
+
 module.exports = router

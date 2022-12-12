@@ -1,7 +1,7 @@
 const user = require('../models/user')
 const habit = require('../models/habit')
 const calendar = require('../models/calendar')
-const { Habit, User } = require('../models')
+const { Habit, User, Calendar } = require('../models')
 
 const createUser = async (req, res) => {
   try {
@@ -106,6 +106,14 @@ const deleteHabit = async (req, res) => {
     return res.status(500).send(error.message)
   }
 }
+const getCalendar = async (req, res) => {
+  try {
+    const calendar = await Calendar.find()
+    return res.status(200).json({ calendar })
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
 
 module.exports = {
   createUser,
@@ -117,5 +125,6 @@ module.exports = {
   getAllHabits,
   getHabitById,
   updateHabit,
-  deleteHabit
+  deleteHabit,
+  getCalendar
 }
