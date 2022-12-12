@@ -22,19 +22,19 @@ const handleSigninChange = (e) => {
 
   return (
     <div>
-      <div>SignIn</div>
-      <form>
+      <div className='form-header'>SignIn</div>
+      <form className='form-containers'>
         <section>
-        <label>Email: </label>
+        <label></label>
         <input type="text" id="email" placeholder="Email" maxLength="75" onChange={handleSigninChange}></input>
         </section>
         <section>
-        <label>Password: </label>
+        <label></label>
         <input type="text" id="password" placeholder="Password" onChange={handleSigninChange}></input>
         </section>
-        <button type="submit">Submit</button>
+        <button className='form-buttons' type="submit">Submit</button>
       </form>
-      <div>Don't have an account? <Link to="/signin">Register Here</Link></div>
+      <div>Don't have an account? <Link to="/register" className='links'>Register</Link></div>
     </div>
   )
 }

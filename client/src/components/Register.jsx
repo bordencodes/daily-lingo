@@ -28,8 +28,8 @@ const handleUserRegChange = (e) => {
 
   return (
     <div>
-      <div>Register</div>
-      <form className='register-container'>
+      <div className='form-header'>Register</div>
+      <form className='form-containers'>
         <section>
         <label></label>
         <input type="text" id="firstName" placeholder="First Name" maxLength="40" onChange={handleUserRegChange}></input>
@@ -50,9 +50,9 @@ const handleUserRegChange = (e) => {
         <label></label>
         <input type="text" id="confirmPassword" placeholder="Confirm Password" onChange={handleUserRegChange}></input>
         </section>
-        <button type="submit">Submit</button>
+        <button className='form-buttons' type="submit">Submit</button>
       </form>
-      <div>Already have an account? <Link to="/signin">Sign-in</Link></div>
+      <div>Already have an account? <Link to="/signin" className='links'>Sign-in</Link></div>
     </div>
   )
 }
