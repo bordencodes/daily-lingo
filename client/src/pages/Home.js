@@ -1,15 +1,29 @@
-// import { useState, useEffect } from 'react'
+import { useState } from 'react'
 // import axios from 'axios'
 // import { useNavigate } from 'react-router-dom'
 import React from 'react'
 import CreateItems from '../components/CreateItems'
 import TrackedItems from '../components/TrackedItems'
 import WordList from '../components/WordList'
+import Habits from './Habits'
 
 const Home = () => {
   // let navigate = useNavigate()
 
-  // const [collections, updateCollections] = useState([])
+  const [words, setWords] = useState([])
+
+  const createDailyWord = (name, trans, date) => {
+    const newDailyWord = { id: Habits(), name, trans, date }
+    const newState = [...words]
+
+    newState.push(newDailyWord)
+    setWords(newState)
+  }
+
+  const deleteDailyWord = (id) => {
+    const newDailyWord = words.filter((check) => check.id !== id)
+    setWords(newDailyWord)
+  }
   // const [form, updateForm] = useState({
   //   title: '',
   //   description: ''
@@ -54,33 +68,23 @@ const Home = () => {
 
   return (
     <div className="App">
-      <CreateItems />
+      <CreateItems onCreatDailyWord={createDailyWord} />
       <WordList>
-        <TrackedItems
+        {/* <TrackedItems
           name="Word of the day"
           trans="Translation Here"
           date={new Date().toLocaleDateString()}
-        />
-        <TrackedItems
-          name="Word of the day"
-          trans="Translation Here"
-          date={new Date().toLocaleDateString()}
-        />
-        <TrackedItems
-          name="Word of the day"
-          trans="Translation Here"
-          date={new Date().toLocaleDateString()}
-        />
-        <TrackedItems
-          name="Word of the day"
-          trans="Translation Here"
-          date={new Date().toLocaleDateString()}
-        />
-        <TrackedItems
-          name="Word of the day"
-          trans="Translation Here"
-          date={new Date().toLocaleDateString()}
-        />
+        /> */}
+        {words.map(({ id, name, trans, date }) => (
+          <TrackedItems
+            key={id}
+            id={id}
+            name={name}
+            trans={trans}
+            date={date}
+            onDeleteDailyWord={deleteDailyWord}
+          />
+        ))}
       </WordList>
       {/* <h2>Select a List</h2>
       {collections.map((collection) => (
