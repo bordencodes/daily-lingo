@@ -99,9 +99,9 @@ const deleteHabit = async (req, res) => {
     const { id } = req.params
     const deletedHabit = await Habit.findByIdAndDelete(id)
     if (deletedHabit) {
-      return res.status(200).send('Habit deleted')
+      return res.status(200).send('Item deleted')
     }
-    throw new Error('Phrase not found')
+    throw new Error('Word not found')
   } catch (error) {
     return res.status(500).send(error.message)
   }
