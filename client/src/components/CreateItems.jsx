@@ -17,9 +17,9 @@ const CreateItems = ({onCreatDailyWord}) => {
   return (
     <div>
       <h2>One Word a Day!</h2>
-    <div className="create-item-form">
-      <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Word" name="name"/>
+    <div>
+      <form className="create-item-form" onSubmit={handleSubmit}>
+        <input type="text" placeholder="Word of the day" name="name"/>
         <input type="text" placeholder="Translation" name="trans"/>
         <input type="date" name="date"/>
         <button className="add-button">Add</button>
