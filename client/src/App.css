@@ -94,8 +94,8 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  
 }
+
 .word-list span {
   width: 100%;
   height: 25px;
@@ -104,17 +104,27 @@
 }
 
 .tracked-item {
+  display: flex;
+  align-items: center;
   background-color: yellow;
   width: 750px;
-  margin: 5px 2px;
-  padding: 10px 15px;
+  margin: 15px 2px 5px 2px;
+  /* padding: 10px 15px; */
   border-radius: 25px;
   font-size: 18px;
 }
 
+.tracked-name {
+  justify-content: flex-start;
+  color: red;
+}
+
 .delete-item {
   cursor: pointer;
-  font-size: small;
+  /* font-size: small; */
+  background-color: red;
+  color: white;
+  border-radius: 25px;
 }
 
 .form-header{
