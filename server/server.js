@@ -19,32 +19,22 @@ app.get('/', (req, res) => {
   res.send('This is root!')
 })
 
-//user
 app.get('/user', (req, res) => {
-  res.send('This is user!')
+  res.send('This is user root!')
 })
 
-//habit
 app.get('/habit', (req, res) => {
-  res.send('This is habit!')
+  res.send('This is habit root!')
 })
 
-//calendar
 app.get('/calendar', (req, res) => {
-  res.send('This is calendar!')
+  res.send('This is calendar root!')
 })
-
-//JW
 
 app.get('/users', async (req, res) => {
   let allUsers = await User.find({})
   res.json(allUsers)
 })
-
-// app.get('/themes/:id', async (req, res) => {
-//   let phrasesByTheme = await Phrase.find({ theme: [req.params.id] })
-//   res.json(phrasesByTheme)
-// })
 
 app.get('/user/:id', async (req, res) => {
   let findUser = await Phrase.findById(req.params.id).populate('collections')
