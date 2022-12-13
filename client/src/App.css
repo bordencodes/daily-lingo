@@ -84,6 +84,7 @@ h2 {
   color: white;
   cursor: pointer;
   margin-right: 10px;
+  font-weight: bold;
 }
 
 .create-item-form {
@@ -129,25 +130,38 @@ h2 {
   align-items: center;
   background-color: #2B3A67;
   color: white;
-  width: 750px;
+  width: 95%;
   margin: 15px 2px 5px 2px;
-  /* padding: 10px 15px; */
   border-radius: 25px;
   font-size: 18px;
 }
 
 .tracked-name {
-  justify-content: flex-start;
-  color: red;
+  color: white;
+  float: left;
+  margin-left: 10px;
+  width: 34%;
+}
+
+.tracked-translation {
+  float: left;
+  margin-left: 10px;
+}
+
+.tracked-date {
+  float: right;
+  margin: 0 10px;
 }
 
 .delete-item {
   cursor: pointer;
-  /* font-size: small; */
-  /* background-color: #AF4319; */
+  font-size: small;
+  align-items: center;
   background-color: #C03221;
   color: white;
   border-radius: 25px;
+  padding: 5px 10px;
+  margin-right: 10px;
 }
 
 .form-header{
