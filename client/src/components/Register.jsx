@@ -2,13 +2,9 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-// import { RegisterUser } from '../services/Auth'
+import { RegisterUser } from '../services/Auth'
 
 const Register = () => {
-
-// const [authenticated, toggleAuthenticated] = useState(false)
-// const [user, setUser] = useState(null)
-
 const [userReg, setUserReg] = useState({
   firstName: "",
   lastName: "",
@@ -17,15 +13,40 @@ const [userReg, setUserReg] = useState({
   confirmPassword: "",
 })
 
-// let navigate = useNavigate()
+let navigate = useNavigate()
 
 const handleRegChange = (e) => {
-  const {id, value} = e.target
-  setUserReg((current) => ({
-    ...current,
-    [id]: value,
-}))
+  setUserReg({ ...userReg, [e.target.name]: e.target.value })
 }
+
+const handleSubmit = async (e) => {
+  e.preventDefault()
+  await RegisterUser({
+    firstName: userReg.firstName,
+    lastName: userReg.lastName,
+    email: userReg.email,
+    password: userReg.password
+  })
+
+  setUserReg({
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
+    confirmPassword: ''
+  })
+
+  navigate('/signin')
+}
+
+// //original 
+// const handleRegChange = (e) => {
+//   const {id, value} = e.target
+//   setUserReg((current) => ({
+//     ...current,
+//     [id]: value,
+// }))
+// }
 
 // const handleSubmit = async (e) => {
 //   e.preventDefault()
@@ -34,28 +55,32 @@ const handleRegChange = (e) => {
   return (
     <div>
       <div className='form-header'>Register</div>
-      <form className='form-containers'>
+      <form className='form-containers' onSubmit={handleSubmit}>
         <section>
-        <label></label>
-        <input type="text" id="firstName" placeholder="First Name" maxLength="40" onChange={handleRegChange}></input>
+        <label htmlFor="firstName"></label>
+        <input name="firstName" type="text" placeholder="First Name" maxLength="40" onChange={handleRegChange}></input>
         </section>
         <section>
-        <label></label>
-        <input type="text" id="lasttName" placeholder="Last Name" maxLength="40" onChange={handleRegChange}></input>
+        <label htmlFor="lastName"></label>
+        <input name="lastName" type="text" placeholder="Last Name" maxLength="40" onChange={handleRegChange}></input>
         </section>
         <section>
-        <label></label>
-        <input type="text" id="email" placeholder="Email" maxLength="75" onChange={handleRegChange}></input>
+        <label htmlFor="email"></label>
+        <input name="email" type="text" placeholder="Email" maxLength="75" onChange={handleRegChange}></input>
         </section>
         <section>
-        <label></label>
-        <input type="text" id="password" placeholder="Password" onChange={handleRegChange}></input>
+        <label htmlFor="password"></label>
+        <input name="password" type="text" placeholder="Password" onChange={handleRegChange}></input>
         </section>
         <section>
-        <label></label>
-        <input type="text" id="confirmPassword" placeholder="Confirm Password" onChange={handleRegChange}></input>
+        <label htmlFor="confirmPassword"></label>
+        <input name="confirmPassword" type="text" placeholder="Confirm Password" onChange={handleRegChange}></input>
         </section>
-        <button className='form-buttons' type="submit">Submit</button>
+        <button className='form-buttons' type="submit" disabled={
+              !userReg.email ||
+              (!userReg.password &&
+                userReg.confirmPassword === userReg.password)
+            }>Submit</button>
       </form>
       <div className='account-note'>Already have an account? <Link to="/signin" className='links'>Sign-in</Link></div>
     </div>
