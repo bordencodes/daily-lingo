@@ -22,7 +22,7 @@ const handleSigninChange = (e) => {
 
   return (
     <div>
-      <div className='form-header'>SignIn</div>
+      <div className='form-header'>Sign-In</div>
       <form className='form-containers'>
         <section>
         <label></label>
@@ -34,7 +34,7 @@ const handleSigninChange = (e) => {
         </section>
         <button className='form-buttons' type="submit">Submit</button>
       </form>
-      <div>Don't have an account? <Link to="/register" className='links'>Register</Link></div>
+      <div className='account-note'>Don't have an account? <Link to="/register" className='links'>Register</Link></div>
     </div>
   )
 }

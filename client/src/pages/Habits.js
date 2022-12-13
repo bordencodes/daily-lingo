@@ -1,7 +1,3 @@
-// import { useState, useEffect } from 'react'
-// import axios from 'axios'
-import React from 'react'
-
 const Habits = () => {
   let habitID = new Uint32Array(8)
   window.crypto.getRandomValues(habitID)
