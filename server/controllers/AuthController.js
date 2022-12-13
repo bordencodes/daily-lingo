@@ -2,11 +2,17 @@ const { User } = require('../models')
 const middleware = require('../middleware')
 
 const Login = async (req, res) => {
+  // try {
+  //   console.log(req.body.email)
+  //   const user = await User.findOne({
+  //     where: { email: req.body.email },
+  //     raw: true
+  //   })
   try {
-    const user = await User.findOne({
-      where: { email: req.body.email },
-      raw: true
-    })
+    console.log(req.body.email)
+    const user = await User.findOne({ email: req.body.email })
+    console.log('user', user)
+    console.log('userpassword', user.password)
     if (
       user &&
       (await middleware.comparePassword(user.password, req.body.password))
