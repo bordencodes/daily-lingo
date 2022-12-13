@@ -25,7 +25,8 @@ const handleSubmit = async (e) => {
     firstName: userReg.firstName,
     lastName: userReg.lastName,
     email: userReg.email,
-    password: userReg.password
+    password: userReg.password,
+    confirmPassword: userReg.confirmPassword
   })
 
   setUserReg({
@@ -38,19 +39,6 @@ const handleSubmit = async (e) => {
 
   navigate('/signin')
 }
-
-// //original 
-// const handleRegChange = (e) => {
-//   const {id, value} = e.target
-//   setUserReg((current) => ({
-//     ...current,
-//     [id]: value,
-// }))
-// }
-
-// const handleSubmit = async (e) => {
-//   e.preventDefault()
-// }
 
   return (
     <div>

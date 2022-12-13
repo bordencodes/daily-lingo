@@ -23,17 +23,8 @@ const handleSubmit = async (e) => {
   setUserSignin({ email: '', password: '' })
   props.setUser(payload)
   props.toggleAuthenticated(true)
-  navigate('/home')
+  navigate('/')
 }
-
-// //original
-// const handleSigninChange = (e) => {
-//   const {id, value} = e.target
-//   setUserSignin((current) => ({
-//     ...current,
-//     [id]: value,
-// }))
-// }
 
   return (
     <div>
