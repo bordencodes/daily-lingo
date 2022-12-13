@@ -1,4 +1,3 @@
-//PostController
 const { Post } = require('../models')
 
 const GetPosts = async (req, res) => {
