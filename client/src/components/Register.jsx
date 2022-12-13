@@ -25,8 +25,7 @@ const handleSubmit = async (e) => {
     firstName: userReg.firstName,
     lastName: userReg.lastName,
     email: userReg.email,
-    password: userReg.password,
-    confirmPassword: userReg.confirmPassword
+    userPassword: userReg.password,
   })
 
   setUserReg({
