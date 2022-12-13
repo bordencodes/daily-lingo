@@ -57,24 +57,24 @@ const handleSubmit = async (e) => {
       <div className='form-header'>Register</div>
       <form className='form-containers' onSubmit={handleSubmit}>
         <section>
-        <label htmlFor="firstName"></label>
-        <input name="firstName" type="text" value={userReg.firstName} placeholder="First Name" maxLength="40" onChange={handleRegChange} required></input>
+          <label htmlFor="firstName"></label>
+          <input name="firstName" type="text" value={userReg.firstName} placeholder="First Name" maxLength="40" onChange={handleRegChange} required></input>
         </section>
         <section>
-        <label htmlFor="lastName"></label>
-        <input name="lastName" type="text" value={userReg.lastName} placeholder="Last Name" maxLength="40" onChange={handleRegChange} required></input>
+          <label htmlFor="lastName"></label>
+          <input name="lastName" type="text" value={userReg.lastName} placeholder="Last Name" maxLength="40" onChange={handleRegChange} required></input>
         </section>
         <section>
-        <label htmlFor="email"></label>
-        <input name="email" type="text" value={userReg.email} placeholder="Email" maxLength="75" onChange={handleRegChange} required></input>
+          <label htmlFor="email"></label>
+          <input name="email" type="text" value={userReg.email} placeholder="Email" maxLength="75" onChange={handleRegChange} required></input>
         </section>
         <section>
-        <label htmlFor="password"></label>
-        <input name="password" type="text" value={userReg.password} placeholder="Password" onChange={handleRegChange} required></input>
+          <label htmlFor="password"></label>
+          <input name="password" type="text" value={userReg.password} placeholder="Password" onChange={handleRegChange} required></input>
         </section>
         <section>
-        <label htmlFor="confirmPassword"></label>
-        <input name="confirmPassword" type="text" value={userReg.confirmPassword} placeholder="Confirm Password" onChange={handleRegChange} required></input>
+          <label htmlFor="confirmPassword"></label>
+          <input name="confirmPassword" type="text" value={userReg.confirmPassword} placeholder="Confirm Password" onChange={handleRegChange} required></input>
         </section>
         <button className='form-buttons' type="submit" disabled={
               !userReg.email ||

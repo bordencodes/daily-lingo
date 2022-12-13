@@ -19,7 +19,7 @@ const handleSigninChange = (e) => {
 
 const handleSubmit = async (e) => {
   e.preventDefault()
-  const payload = await SignInUser(formValues)
+  const payload = await SignInUser(userSignin)
   setUserSignin({ email: '', password: '' })
   props.setUser(payload)
   props.toggleAuthenticated(true)
@@ -40,12 +40,12 @@ const handleSubmit = async (e) => {
       <div className='form-header'>Sign-In</div>
       <form className='form-containers' onSubmit={handleSubmit}>
         <section>
-        <label htmlFor='email'></label>
-        <input name="email" type="text" value={userSignin.email} placeholder="Email" maxLength="75" onChange={handleSigninChange} required></input>
+          <label htmlFor='email'></label>
+          <input name="email" type="text" value={userSignin.email} placeholder="Email" maxLength="75" onChange={handleSigninChange} required></input>
         </section>
         <section>
-        <label htmlFor='password'></label>
-        <input name="password" type="text" value={userSignin.password} placeholder="Password" onChange={handleSigninChange} required></input>
+          <label htmlFor='password'></label>
+          <input name="password" type="text" value={userSignin.password} placeholder="Password" onChange={handleSigninChange} required></input>
         </section>
         <button className='form-buttons' type="submit" disabled={!userSignin.email || !userSignin.password}>Submit</button>
       </form>
