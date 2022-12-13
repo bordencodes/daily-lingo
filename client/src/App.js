@@ -5,18 +5,59 @@ import Nav from './components/Nav'
 import Home from './pages/Home'
 import Register from './components/Register'
 import Signin from './components/Signin'
-// import WordList from './components/WordList'
+import { CheckSession } from './services/Auth'
+import { useState, useEffect } from 'react'
 
-function App() {
+const App = () => {
+  const [authenticated, toggleAuthenticated] = useState(false)
+  const [user, setUser] = useState(null)
+
+  const handleLogOut = () => {
+    //Reset all auth related state and clear localStorage
+    setUser(null)
+    toggleAuthenticated(false)
+    localStorage.clear()
+  }
+
+  const CheckToken = async () => {
+    const user = await CheckSession()
+    setUser(user)
+    toggleAuthenticated(true)
+  }
+
+  useEffect(() => {
+    const token = localStorage.getItem('token')
+
+    if (token) {
+      CheckToken()
+    }
+  }, [])
+
   return (
     <div className="App">
-      <Nav />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        {/* <Route path="/habit" element={<Habits />} /> */}
-        <Route path="/register" element={<Register />} />
-        <Route path="/signin" element={<Signin />} />
-      </Routes>
+      <Nav
+        authenticated={authenticated}
+        user={user}
+        handleLogOut={handleLogOut}
+      />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* <Route path="/habit" element={<Habits />} /> */}
+          {/* <Route path="/register" element={<Register />} />
+        <Route path="/signin" element={<Signin />} /> */}
+          <Route
+            path="/signin"
+            element={
+              <Signin
+                setUser={setUser}
+                toggleAuthenticated={toggleAuthenticated}
+              />
+            }
+          />
+          <Route path="/register" element={<Register />} />
+        </Routes>
+      </main>
     </div>
   )
 }
