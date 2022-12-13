@@ -6,7 +6,7 @@ router.get('/', (req, res) => res.send('This is root!'))
 
 router.post('/user', controllers.createUser)
 
-router.get('/user', controllers.getAllUsers)
+router.get('/users', controllers.getAllUsers)
 
 router.get('/user/:id', controllers.getUserById)
 
