@@ -1,4 +1,3 @@
-//AuthController
 const { User } = require('../models')
 const middleware = require('../middleware')
 
