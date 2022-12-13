@@ -58,23 +58,23 @@ const handleSubmit = async (e) => {
       <form className='form-containers' onSubmit={handleSubmit}>
         <section>
         <label htmlFor="firstName"></label>
-        <input name="firstName" type="text" placeholder="First Name" maxLength="40" onChange={handleRegChange}></input>
+        <input name="firstName" type="text" value={userReg.firstName} placeholder="First Name" maxLength="40" onChange={handleRegChange}></input>
         </section>
         <section>
         <label htmlFor="lastName"></label>
-        <input name="lastName" type="text" placeholder="Last Name" maxLength="40" onChange={handleRegChange}></input>
+        <input name="lastName" type="text" value={userReg.lastName} placeholder="Last Name" maxLength="40" onChange={handleRegChange}></input>
         </section>
         <section>
         <label htmlFor="email"></label>
-        <input name="email" type="text" placeholder="Email" maxLength="75" onChange={handleRegChange}></input>
+        <input name="email" type="text" value={userReg.email} placeholder="Email" maxLength="75" onChange={handleRegChange}></input>
         </section>
         <section>
         <label htmlFor="password"></label>
-        <input name="password" type="text" placeholder="Password" onChange={handleRegChange}></input>
+        <input name="password" type="text" value={userReg.password} placeholder="Password" onChange={handleRegChange}></input>
         </section>
         <section>
         <label htmlFor="confirmPassword"></label>
-        <input name="confirmPassword" type="text" placeholder="Confirm Password" onChange={handleRegChange}></input>
+        <input name="confirmPassword" type="text" value={userReg.confirmPassword} placeholder="Confirm Password" onChange={handleRegChange}></input>
         </section>
         <button className='form-buttons' type="submit" disabled={
               !userReg.email ||
