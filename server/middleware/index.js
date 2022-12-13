@@ -1,7 +1,8 @@
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
-const SALT_ROUNDS = 12
-const APP_SECRET = 'supersecretkey'
+
+const SALT_ROUNDS = parseInt(process.env.SALT_ROUNDS)
+const APP_SECRET = process.env.APP_SECRET
 
 const hashPassword = async (password) => {
   // Accepts a password from the request body
@@ -11,6 +12,8 @@ const hashPassword = async (password) => {
 }
 
 const comparePassword = async (storedPassword, password) => {
+  console.log(storedPassword)
+  console.log(password)
   // Accepts the password provided in the login request and the currently stored password
   // Compares the two passwords for a match
   let passwordMatch = await bcrypt.compare(password, storedPassword)

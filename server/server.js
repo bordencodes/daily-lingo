@@ -1,6 +1,7 @@
 const express = require('express')
 const db = require('./db')
 const cors = require('cors')
+const AuthRouter = require('./routes/AuthRouter')
 
 const app = express()
 
@@ -14,6 +15,7 @@ app.use(express.json())
 app.use(cors())
 // app.use(express.static(`${__dirname}/client/build`))
 app.use('/api', Router)
+app.use('/auth', AuthRouter)
 
 app.get('/', (req, res) => {
   res.send('This is root!')
