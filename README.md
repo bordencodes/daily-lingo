@@ -51,9 +51,13 @@
 
 ---
 
-##### Landing ![Home](https://i.postimg.cc/4yJRk4M8/daily-lingo-app.png)](https://postimg.cc/MMrF1wzR)
+##### Home
 
-##### Homepage ![Sign-in](https://i.postimg.cc/tJrfK3FT/daily-lingo-signin.png)](https://postimg.cc/2LZ2vBcR)
+![Home](https://i.postimg.cc/4yJRk4M8/daily-lingo-app.png)
+
+##### Register
+
+![Sign-in](https://i.postimg.cc/tJrfK3FT/daily-lingo-signin.png)
 
 #### View App on: [Heroku](https://daily-lingo.herokuapp.com/)
 
