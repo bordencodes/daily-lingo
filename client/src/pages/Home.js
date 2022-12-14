@@ -1,46 +1,37 @@
-import { useState } from 'react'
-// import axios from 'axios'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
 import React from 'react'
 import CreateItems from '../components/CreateItems'
 import TrackedItems from '../components/TrackedItems'
 import WordList from '../components/WordList'
-import Habits from './Habits'
 
 const Home = () => {
   const [words, setWords] = useState([])
-  // const [changeWords, updateWords] = ({
-  //   checkWord: ''
-  // })
-  // const [input, setInput] = useState('')
 
-  const createDailyWord = (name, trans, date) => {
-    const newDailyWord = { id: Habits(), name, trans, date }
-    const newState = [...words]
-
-    newState.push(newDailyWord)
-    setWords(newState)
+  const apiCall = async () => {
+    let response = await axios.get('http://localhost:3001/habit')
+    setWords(response.data)
   }
 
-  // const updateDailyWord = (id) => {
-  //   const changeDailyWord = words.filter((check) => check.id !== id)
-  //   setWords(changeDailyWord)
-  // }
-
-  const deleteDailyWord = (id) => {
-    const newDailyWord = words.filter((check) => check.id !== id)
-    setWords(newDailyWord)
+  const deleteDailyWord = async (id) => {
+    let response = await axios.delete(`http://localhost:3001/habit/${id}`)
+    apiCall()
   }
+
+  useEffect(() => {
+    apiCall()
+  }, [])
 
   return (
     <div className="App">
-      <CreateItems onCreatDailyWord={createDailyWord} />
+      <CreateItems setWords={setWords} />
       <WordList>
-        {words.map(({ id, name, trans, date }) => (
+        {words.map(({ _id, name, translation, date }) => (
           <TrackedItems
-            key={id}
-            id={id}
+            key={_id}
+            id={_id}
             name={name}
-            trans={trans}
+            trans={translation}
             date={date}
             // onUpdateDailyWord={updateDailyWord}
             onDeleteDailyWord={deleteDailyWord}

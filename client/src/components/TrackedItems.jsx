@@ -3,7 +3,9 @@ import React from "react";
 const TrackedItems = ({name, trans, id, date, onDeleteDailyWord}) => (
   <div className="tracked-item">
     <span >
-      <div className="tracked-name">{name}</div>
+      <div className="tracked-name">
+        <input value={name} />
+      </div>
       <div className="tracked-translation"><strong>Translation:</strong> {trans}</div>
       <div className="tracked-date">{date}</div>
       
