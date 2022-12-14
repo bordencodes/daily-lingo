@@ -74,12 +74,31 @@ h3 {
   
 }
 
+.navbar2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2B3A67;
+  color: white;
+  padding: 10px 10px 20px;
+  margin-bottom: 10px;
+  
+}
+
 .appTitle {
   font-weight: bold;
   font-size: 25px;
   padding-left: 15px;
   font-family: cursive;
   margin: 0 735px 0 0;
+}
+
+.appTitle2 {
+  font-weight: bold;
+  font-size: 25px;
+  padding-left: 15px;
+  font-family: cursive;
+  margin: 0 10% 0 0;
 }
 
 .navLinks {
