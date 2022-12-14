@@ -10,7 +10,7 @@
 
 ### **_Description_**
 
-#### The Daily Lingo App is a full-stack habit tracker application that allows language learners study at a minimum one word a day while tracking their progress along the way.
+#### The Daily Lingo App is a full-stack daily word tracker application that allows foreign language learners the ability to study at a minimum one word a day while tracking the dates of their progress along the way.
 
 #### As a language learner, habitual practice is necessary to progress in your target language. This app is designed to encourage users to learn a new word daily with the ability to view, create, update, and delete as necessary.
 
@@ -37,17 +37,17 @@
 
 ### **_Features_**
 
-- Tasks and Phrase field
+- Word of the Day
 
-  - Task
-  - Phrase
+  - Foreign Word
+  - Translated Word
 
-- Progress tracker
+- Authentication
 
-  - Checkbox
-  - Running total
+  - Sign-in
+  - Register
 
-- Full CRUD operations
+- Full CRUD operations on word listing
 
 ---
 
@@ -65,6 +65,7 @@
 
 ### **_Future Updates_**
 
+- [] Only allow signed-in users to view complete listing
 - [] Add photos
 - [] Mobile responsive
 
