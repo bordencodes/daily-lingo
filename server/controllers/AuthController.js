@@ -2,12 +2,6 @@ const { User } = require('../models')
 const middleware = require('../middleware')
 
 const Login = async (req, res) => {
-  // try {
-  //   console.log(req.body.email)
-  //   const user = await User.findOne({
-  //     where: { email: req.body.email },
-  //     raw: true
-  //   })
   try {
     console.log(req.body.email)
     const user = await User.findOne({ email: req.body.email })

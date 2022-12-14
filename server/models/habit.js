@@ -3,8 +3,8 @@ const { Schema } = require('mongoose')
 const habit = new Schema(
   {
     userId: [{ type: Schema.Types.ObjectId, ref: 'User' }],
-    habitName: { type: String, required: true },
-    description: { type: String, required: true }
+    name: { type: String, required: true },
+    translation: { type: String, required: true }
   },
   { timestamps: true }
 )
