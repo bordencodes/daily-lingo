@@ -15,8 +15,6 @@ const CreateItems = ({onCreatDailyWord, setWords}) => {
 
   const apiCall = async () => {
     let response = await axios.get('http://localhost:3001/habit')
-    console.log(response)
-    console.log(response.data)
     setWords(response.data)
   }
 
@@ -25,18 +23,6 @@ const CreateItems = ({onCreatDailyWord, setWords}) => {
     let response = await axios.post('http://localhost:3001/habit', form)
     apiCall()
 
-    
-
-
-
-  //   const {name, trans, date} = e.target.elements
-
-  //   if(name.value && trans.value && date){
-  //   onCreatDailyWord(name.value, trans.value, date.value)
-  //   }
-  //   name.value = ""
-  //   trans.value = ""
-  //   date.value = ""
   }
 
   return (

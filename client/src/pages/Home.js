@@ -13,6 +13,11 @@ const Home = () => {
     setWords(response.data)
   }
 
+  const updateDailyWord = async (id) => {
+    let response = await axios.put(`http://localhost:3001/habit/${id}`)
+    apiCall()
+  }
+
   const deleteDailyWord = async (id) => {
     let response = await axios.delete(`http://localhost:3001/habit/${id}`)
     apiCall()
@@ -33,7 +38,7 @@ const Home = () => {
             name={name}
             trans={translation}
             date={date}
-            // onUpdateDailyWord={updateDailyWord}
+            onUpdateDailyWord={updateDailyWord}
             onDeleteDailyWord={deleteDailyWord}
           />
         ))}

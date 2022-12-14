@@ -186,6 +186,17 @@ h3 {
   margin-right: 10px;
 }
 
+.update-item {
+  cursor: pointer;
+  font-size: small;
+  align-items: center;
+  background-color: #C03221;
+  color: white;
+  border-radius: 25px;
+  padding: 5px 10px;
+  margin-right: 10px;
+}
+
 .form-header{
   font-weight: bold;
   margin: 20px;
