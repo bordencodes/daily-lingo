@@ -1,16 +1,16 @@
 # daily-lingo
 
-## Date: 12/08/2022
+## Date: 12/14/2022
 
 ### By: Bret Borden
 
-#### [LinkedIn](www.likedin.com) | [GitHub](www.github.com)
+#### [LinkedIn](www.linkedin.com/in/bret-borden) | [GitHub](https://github.com/bordencodes/)
 
 ---
 
 ### **_Description_**
 
-#### The Daily Lingo App is a full-stack daily word tracker application that allows foreign language learners the ability to study at a minimum one word a day while tracking the dates of their progress along the way.
+#### The Daily Lingo App is a full-stack daily word log application that allows foreign language learners to study at least one word a day while tracking the dates of their progress along the way.
 
 #### As a language learner, habitual practice is necessary to progress in your target language. This app is designed to encourage users to learn a new word daily with the ability to view, create, update, and delete as necessary.
 
@@ -29,9 +29,9 @@
 
 #### View: [Trello Board](https://trello.com/invite/b/vBysUzxG/ATTI9423beeed6e55bef02bea47279f6a25f905BB0E8/daily-lingo-language-learning-habit-tracker)
 
-#### View: [ERD](https://postimg.cc/CZy6X3NG)
+#### View: [ERD](https://postimg.cc/dLqpT5RJ)
 
-#### View: [Component Hierarchy Diagram](https://postimg.cc/LYhS8dcJ)
+#### View: [Component Hierarchy Diagram](https://postimg.cc/3yC2pFFH)
 
 ---
 
@@ -51,23 +51,20 @@
 
 ---
 
-##### Landing
+##### Landing ![Home](https://i.postimg.cc/4yJRk4M8/daily-lingo-app.png)](https://postimg.cc/MMrF1wzR)
 
-![Landing]()
+##### Homepage ![Sign-in](https://i.postimg.cc/tJrfK3FT/daily-lingo-signin.png)](https://postimg.cc/2LZ2vBcR)
 
-##### Homepage
-
-![Homepage]()
-
-#### View App on: [Heroku](https://www.herokuapp.com/)
+#### View App on: [Heroku](https://daily-lingo.herokuapp.com/)
 
 ---
 
 ### **_Future Updates_**
 
-- [] Only allow signed-in users to view complete listing
-- [] Add photos
-- [] Mobile responsive
+- [] Only allow signed-in accounts to view, add, edit and delete
+- [] Update CSS and incorporate mobile responsiveness
+- [] Include password recovery feature
+- [] Add a reminder feature to encourage users to add
 
 ---
 
@@ -75,4 +72,8 @@
 
 ##### [MDN](https://developer.mozilla.org/en-US/)
 
-##### More coming soon
+##### [Conditional Rendering](https://reactjs.org/docs/conditional-rendering.html)
+
+##### [Heroku Dev Center](https://devcenter.heroku.com/articles/git)
+
+##### Class Notes: React | MongoDB | Express | JWT Auth | React Auth
