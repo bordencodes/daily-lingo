@@ -8,6 +8,7 @@ const TrackedItems = ({name, trans, id, date, onDeleteDailyWord}) => (
       <div className="tracked-date">{date}</div>
       
     </span>
+    {/* <div className="update-item" onClick={()=> onUpdateDailyWord(id)}>Update</div> */}
     <div className="delete-item" onClick={()=> onDeleteDailyWord(id)}>Delete</div>
   </div>
 )

@@ -1,6 +1,5 @@
 import { useState } from 'react'
 // import axios from 'axios'
-// import { useNavigate } from 'react-router-dom'
 import React from 'react'
 import CreateItems from '../components/CreateItems'
 import TrackedItems from '../components/TrackedItems'
@@ -8,9 +7,11 @@ import WordList from '../components/WordList'
 import Habits from './Habits'
 
 const Home = () => {
-  // let navigate = useNavigate()
-
   const [words, setWords] = useState([])
+  // const [changeWords, updateWords] = ({
+  //   checkWord: ''
+  // })
+  // const [input, setInput] = useState('')
 
   const createDailyWord = (name, trans, date) => {
     const newDailyWord = { id: Habits(), name, trans, date }
@@ -19,6 +20,11 @@ const Home = () => {
     newState.push(newDailyWord)
     setWords(newState)
   }
+
+  // const updateDailyWord = (id) => {
+  //   const changeDailyWord = words.filter((check) => check.id !== id)
+  //   setWords(changeDailyWord)
+  // }
 
   const deleteDailyWord = (id) => {
     const newDailyWord = words.filter((check) => check.id !== id)
@@ -29,11 +35,6 @@ const Home = () => {
     <div className="App">
       <CreateItems onCreatDailyWord={createDailyWord} />
       <WordList>
-        {/* <TrackedItems
-          name="Word of the day"
-          trans="Translation Here"
-          date={new Date().toLocaleDateString()}
-        /> */}
         {words.map(({ id, name, trans, date }) => (
           <TrackedItems
             key={id}
@@ -41,6 +42,7 @@ const Home = () => {
             name={name}
             trans={trans}
             date={date}
+            // onUpdateDailyWord={updateDailyWord}
             onDeleteDailyWord={deleteDailyWord}
           />
         ))}

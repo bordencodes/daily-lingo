@@ -6,11 +6,14 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
   if (user) {
     authenticatedOptions = (
       <nav>
+        <div className="navbar">
+        <div className="appTitle">Daily Lingo</div>
         <h3>Welcome {user.email}!</h3>
-        <Link to="/"></Link>
-        <Link onClick={handleLogOut} to="/">
+        <Link to="/" className="navLinks"></Link>
+        <Link className="navLinks" onClick={handleLogOut} to="/">
           Sign Out
         </Link>
+        </div>
       </nav>
     )
   }
@@ -28,12 +31,6 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
 
   return (
       <nav>
-        {/* <div className="navbar">
-          <div className="appTitle">Daily Lingo</div>
-          <div><Link to="/" className="navLinks">Home</Link></div>
-          <div><Link to="/signin" className="navLinks">Sign-In</Link></div>
-          <div><Link to="/register" className="navLinks">Register</Link></div>
-        </div> */}
         {authenticated && user ? authenticatedOptions : publicOptions}
       </nav>
   )
