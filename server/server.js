@@ -24,7 +24,7 @@ app.get('/user', (req, res) => {
   res.send('This is user root!')
 })
 
-app.get('/habit', (req, res) => {
+app.get('/', (req, res) => {
   res.send('This is habit root!')
 })
 
