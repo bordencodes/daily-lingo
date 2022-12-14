@@ -37,13 +37,6 @@
   }
 }
 
-/* .navbar {
-  display: grid;
-  grid-template-columns: 7fr 1fr 1fr 1fr;
-  grid-column-gap: 5px ;
-  background-color: lightgray;
-  
-} */
 body {
   background-color: #7C9082;
 }
