@@ -9,17 +9,17 @@ const Home = () => {
   const [words, setWords] = useState([])
 
   const apiCall = async () => {
-    let response = await axios.get('http://localhost:3001/habit')
+    let response = await axios.get('/habit')
     setWords(response.data)
   }
 
   const updateDailyWord = async (id) => {
-    let response = await axios.put(`http://localhost:3001/habit/${id}`)
+    let response = await axios.put(`/habit/${id}`)
     apiCall()
   }
 
   const deleteDailyWord = async (id) => {
-    let response = await axios.delete(`http://localhost:3001/habit/${id}`)
+    let response = await axios.delete(`/habit/${id}`)
     apiCall()
   }
 

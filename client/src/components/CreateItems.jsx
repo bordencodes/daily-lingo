@@ -14,13 +14,13 @@ const CreateItems = ({onCreatDailyWord, setWords}) => {
   }
 
   const apiCall = async () => {
-    let response = await axios.get('http://localhost:3001/habit')
+    let response = await axios.get('/habit')
     setWords(response.data)
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault() 
-    let response = await axios.post('http://localhost:3001/habit', form)
+    let response = await axios.post('/habit', form)
     apiCall()
 
   }
