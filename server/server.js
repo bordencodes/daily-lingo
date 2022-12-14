@@ -15,6 +15,7 @@ app.use(express.json())
 app.use(cors())
 app.use('/api', Router)
 app.use('/auth', AuthRouter)
+app.use(express.static(`${__dirname}/client/build`))
 
 app.get('/', (req, res) => {
   res.send('This is root!')
@@ -84,6 +85,10 @@ app.delete('/user/:id', async (req, res) => {
 app.delete('/habit/:id', async (req, res) => {
   let deleteHabit = await Habit.findByIdAndDelete(req.params.id)
   res.json(deleteHabit)
+})
+
+app.get('/*', (req, res) => {
+  res.sendFile(`${__dirname}/client/build/index.html`)
 })
 
 app.listen(PORT, () => console.log(`Express server listening on port: ${PORT}`))
