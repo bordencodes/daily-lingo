@@ -13,8 +13,8 @@ const Home = () => {
     setWords(response.data)
   }
 
-  const updateDailyWord = async (id) => {
-    let response = await axios.put(`/habit/${id}`)
+  const updateDailyWord = async (id, form) => {
+    let response = await axios.put(`/habit/${id}`, form)
     apiCall()
   }
 
