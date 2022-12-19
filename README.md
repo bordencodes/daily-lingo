@@ -4,7 +4,7 @@
 
 ### By: Bret Borden
 
-#### [LinkedIn](www.linkedin.com/in/bret-borden) | [GitHub](https://github.com/bordencodes/)
+#### [LinkedIn](http://www.linkedin.com/in/bret-borden) | [GitHub](https://github.com/bordencodes)
 
 ---
 
